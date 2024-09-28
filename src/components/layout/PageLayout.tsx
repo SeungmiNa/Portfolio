@@ -14,16 +14,10 @@ const PageLayout: React.FC<pageLayoutProps> = ({
 }) => {
   return (
     <>
-      <header>
-        <title>{title}</title>
-        <meta name="description" content="Seungmi Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </header>
-      <div className="min-h-full bg-[#F4F4F5]">
-        <Navbar />
+      <div className="h-full flex-1">
+        {/* <Navbar defaultClass="sticky top-0"/> */}
         <main
-          className={`mx-auto max-w-9xl sm:px-6 lg:px-8 h-full ${defaultClass}`}
+          className={`mx-auto overflow-hidden flex-1 w-full bg-blue-200 sm:px-6 lg:px-8 h-full overflow-y-auto ${defaultClass}`}
         >
           {content}
         </main>

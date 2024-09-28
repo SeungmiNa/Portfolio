@@ -14,10 +14,10 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ defaultClass }) => {
   return (
-    <Disclosure as="nav" className="bg-[#F4F4F5]">
+    <Disclosure as="nav" className={`${defaultClass} bg-[#F4F4F5]`}>
       {({ open }) => (
         <>
-          <div className="px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8 bg-white/80 rounded-full container mx-auto max-w-7xl my-2">
             <div className="flex h-14 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
@@ -43,12 +43,14 @@ const Navbar: React.FC<NavbarProps> = ({ defaultClass }) => {
                     type="button"
                     className="relative rounded-full p-2 text-stone-900 hove:bg-gray-200 hover:text-stone-200 focus-outline-none focus:ring-2 hover:bg-stone-800"
                   >
+                    <a href="mailto:naissme0@gmail.com" title="contact to author">
                     <span className="absloute -inset-1.5" />
                     <span className="sr-only">contact</span>
                     <IoPaperPlaneOutline
                       aria-hidden="true"
                       className="w-5 h-5"
                     />
+                    </a>
                   </button>
                 </div>
               </div>
